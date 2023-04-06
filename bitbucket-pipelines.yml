@@ -1,0 +1,48 @@
+image: wagnerstephan/bitbucket-git-ftp:latest
+
+pipelines:
+   custom:
+      init-staging:
+      - step:
+          caches:
+            - node
+          script:
+            - git reset --hard
+            - git ftp init --user $FTP_USER_STAGING --passwd $FTP_PW_STAGING $STAGING_URL
+      deploy-staging:
+      - step:
+          caches:
+            - node
+          script:
+            - git reset --hard
+            - git ftp push --user $FTP_USER_STAGING --passwd $FTP_PW_STAGING $STAGING_URL
+      init-prod:
+      - step:
+          caches:
+            - node
+          script:
+            - git reset --hard
+            - git ftp init --user $FTP_USER_PROD --passwd $FTP_PW_PROD $PROD_URL
+      deploy-prod:
+      - step:
+          name: Deploy master branch.
+          image: atlassian/default-image:3
+          caches:
+            - node
+          script:
+            - apt-get update && apt-get install -y git-ftp
+            - git reset --hard
+            - git ftp push --user $FTP_USER_PROD --passwd $FTP_PW_PROD $PROD_URL
+   branches:
+      develop:
+        - step:
+            name: Deploy to staging server from develop.
+            script:
+              - git ftp push --user $FTP_USER_STAGING --passwd $FTP_PW_STAGING $STAGING_URL
+      master:
+        - step:
+            name: Deploy to production server from master.
+            image: atlassian/default-image:3
+            script:
+              - apt-get update && apt-get install -y git-ftp
+              - git ftp push --user $FTP_USER_PROD --passwd $FTP_PW_PROD $PROD_URL

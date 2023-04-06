@@ -1,0 +1,21 @@
+{
+    "name": "sgy/wordpress-boilerplate",
+    "description": "A generic Wordpress setup for SGY websites.",
+    "type": "project",
+    "require": {
+        "roots/wordpress": "^6.2",
+        "roots/wp-config": "^1.0",
+        "oscarotero/env": "^2.1"
+    },
+    "authors": [
+        {
+            "name": "Mark",
+            "email": "mark.condello@sparkgreen.com.au"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true
+        }
+    }
+}

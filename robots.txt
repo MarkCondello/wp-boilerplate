@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+## ToDo: Sitemap: https://SITE_URL/sitemap_index.xml
