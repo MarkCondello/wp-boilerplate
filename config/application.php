@@ -69,7 +69,6 @@ $table_prefix = env('DB_PREFIX') ?: 'wp_';
 
 if (env('DATABASE_URL')) {
     $dsn = (object) parse_url(env('DATABASE_URL'));
-
     Config::define('DB_NAME', substr($dsn->path, 1));
     Config::define('DB_USER', $dsn->user);
     Config::define('DB_PASSWORD', isset($dsn->pass) ? $dsn->pass : null);
@@ -97,7 +96,7 @@ Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 Config::define('DISALLOW_FILE_EDIT', true);
 
 // Disable plugin and theme updates and installation from the admin
-Config::define('DISALLOW_FILE_MODS', false);
+Config::define('DISALLOW_FILE_MODS', true);
 // Limit the number of post revisions that Wordpress stores (true (default WP): store every revision)
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: true);
 
@@ -118,13 +117,10 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
 }
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
-
 if (file_exists($env_config)) {
     require_once $env_config;
 }
-
 Config::apply();
-
 /**
  * Bootstrap WordPress
  */

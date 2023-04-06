@@ -15,4 +15,4 @@ use Roots\WPConfig\Config;
  */
 
 // Enable plugin and theme updates and installation from the admin
-Config::define('DISALLOW_FILE_MODS', false);
+Config::define('DISALLOW_FILE_MODS', true);
