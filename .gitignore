@@ -10,7 +10,7 @@ web/app/themes/*
 
 # WordPress
 web/wp
-web/.htaccess
+#web/.htaccess
 
 # Logs
 *.log
