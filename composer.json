@@ -6,7 +6,8 @@
         "roots/wordpress": "^6.2",
         "roots/wp-config": "^1.0",
         "oscarotero/env": "^2.1",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "roots/acorn": "^3.1"
     },
     "authors": [
         {
@@ -34,5 +35,8 @@
         "post-root-package-install": [
           "php -r \"copy('.env.example', '.env');\""
         ]
-    }
+    },
+    "post-autoload-dump": [
+        "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+      ]
 }

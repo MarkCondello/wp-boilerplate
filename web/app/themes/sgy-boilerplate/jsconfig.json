@@ -7,7 +7,7 @@
       "@scripts/*": ["scripts/*"],
       "@styles/*": ["styles/*"]
     },
-    "types": ["@roots/bud", "@roots/sage", "@roots/bud-tailwindcss"]
+    "types": ["@roots/bud", "@roots/sage", "@roots/bud-css"]
   },
   "include": ["bud.config.js", "resources"],
   "exclude": ["node_modules", "public"]

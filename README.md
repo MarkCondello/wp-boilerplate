@@ -4,13 +4,23 @@
 - PHP 8.^
 - node 16^
 - npm 8^
+- WordPress >= 5.4
+- BCMath PHP Extension
+- Ctype PHP Extension
+- Fileinfo PHP Extension
+- JSON PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
 
 ## Project install
 From the root directory run `composer install`
 From the `web/app/themes/sgy-boilerplate` directory run:
 - `composer install`
-- `npm i`
 
+Run yarn from the theme directory to install dependencies
+Update bud.config.js with your local dev URL
+yarn build — Compile assets
 
 
 ## Custom directory structure
@@ -33,3 +43,11 @@ if (file_exists($env_config)) {
 }
 ```
 A good default policy is to deviate from the production config as little as possible. Try to define as much of your configuration settings in the `/config/application.php` file as possible.
+
+## sgy-boilerplate sage theme
+
+We can remove tailwind settings which come with the sage install using the following [instructions](https://roots.io/sage/docs/replacing-tailwind-with-bootstrap/).
+
+These instructions help with [setting up Zurb Foundation](https://discourse.roots.io/t/using-foundation-6-7-5-with-sage-10/24637) withing the sage theme.
+
+`yarn` must be used for installing packages with the sage roots theme. Details of the available `yarn` commands are [here](https://yarnpkg.com/cli/npm/audit).

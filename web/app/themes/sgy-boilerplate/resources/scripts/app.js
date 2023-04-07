@@ -1,10 +1,12 @@
 import domReady from '@roots/sage/client/dom-ready';
-
+import 'foundation-sites';
+import 'what-input';
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  console.log('domsync???')
+  // ...
+  $(document).foundation();
 });
 
 /**

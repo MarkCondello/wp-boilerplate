@@ -17,7 +17,7 @@ export default async (app) => {
       app: ['@scripts/app', '@styles/app'],
       editor: ['@scripts/editor', '@styles/editor'],
     })
-
+    .provide({ jquery: ["jQuery", "$"], })
     /**
      * Directory contents to be included in the compilation
      * @see {@link https://bud.js.org/docs/bud.assets/}
@@ -40,14 +40,14 @@ export default async (app) => {
      * Development origin
      * @see {@link https://bud.js.org/docs/bud.serve/}
      */
+    // https://wp-boilerplate:8890/
     .serve('http://localhost:3000')
 
     /**
      * URI of the `public` directory
      * @see {@link https://bud.js.org/docs/bud.setPublicPath/}
      */
-    // Dev Note: Change this to the themes path to the public directory
-    .setPublicPath('/app/themes/sgy-boilerplate/public/')
+    .setPublicPath('/app/themes/sgy/public/')
 
     /**
      * Generate WordPress `theme.json`
@@ -82,8 +82,5 @@ export default async (app) => {
         customFontSize: false,
       },
     })
-    .useTailwindColors()
-    .useTailwindFontFamily()
-    .useTailwindFontSize()
     .enable();
 };

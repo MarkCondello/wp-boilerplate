@@ -20,7 +20,12 @@
   },
   "devDependencies": {
     "@roots/bud": "6.8.0",
-    "@roots/bud-tailwindcss": "6.8.0",
     "@roots/sage": "6.8.0"
+  },
+  "dependencies": {
+    "@roots/bud-sass": "6.8.0",
+    "foundation-sites": "^6.7.5",
+    "motion-ui": "^2.0.4",
+    "what-input": "^5.2.12"
   }
 }
