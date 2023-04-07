@@ -1,0 +1,2 @@
+<?= \Roots\view('partials.comments', $data ?? get_defined_vars())->render(); ?>
+<?php /**PATH /Users/garyoconnell/Sites/wp-boilerplate/web/app/themes/sgy-boilerplate/resources/views/partials/comments.blade.php ENDPATH**/ ?>

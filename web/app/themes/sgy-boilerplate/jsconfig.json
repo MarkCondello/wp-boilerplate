@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "resources",
+    "paths": {
+      "@fonts/*": ["fonts/*"],
+      "@images/*": ["images/*"],
+      "@scripts/*": ["scripts/*"],
+      "@styles/*": ["styles/*"]
+    },
+    "types": ["@roots/bud", "@roots/sage", "@roots/bud-tailwindcss"]
+  },
+  "include": ["bud.config.js", "resources"],
+  "exclude": ["node_modules", "public"]
+}

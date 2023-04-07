@@ -1,5 +1,18 @@
 # SGY WP Boilerplate
 
+## System requirements
+- PHP 8.^
+- node 16^
+- npm 8^
+
+## Project install
+From the root directory run `composer install`
+From the `web/app/themes/sgy-boilerplate` directory run:
+- `composer install`
+- `npm i`
+
+
+
 ## Custom directory structure
 Using the [`composer/installers` package]('https://github.com/composer/installers'), we have defined where Wordpress and plugins are installed with settings added to the `installer-paths` and `wordpress-install-dir` in the root composer .json.
 
