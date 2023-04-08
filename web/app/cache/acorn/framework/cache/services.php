@@ -14,6 +14,7 @@
     10 => 'Carbon\\Laravel\\ServiceProvider',
     11 => 'Termwind\\Laravel\\TermwindServiceProvider',
     12 => 'App\\Providers\\ThemeServiceProvider',
+    13 => 'Log1x\\Poet\\PoetServiceProvider',
   ),
   'eager' => 
   array (
@@ -27,6 +28,7 @@
     7 => 'Carbon\\Laravel\\ServiceProvider',
     8 => 'Termwind\\Laravel\\TermwindServiceProvider',
     9 => 'App\\Providers\\ThemeServiceProvider',
+    10 => 'Log1x\\Poet\\PoetServiceProvider',
   ),
   'deferred' => 
   array (

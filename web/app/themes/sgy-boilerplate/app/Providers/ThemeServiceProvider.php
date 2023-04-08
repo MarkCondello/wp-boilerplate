@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Roots\Acorn\Sage\SageServiceProvider;
+use App\View\Blocks\AreYouPayingAttention;
 
 class ThemeServiceProvider extends SageServiceProvider
 {
@@ -24,5 +25,6 @@ class ThemeServiceProvider extends SageServiceProvider
     public function boot()
     {
         parent::boot();
+        new AreYouPayingAttention(); // custom block
     }
 }

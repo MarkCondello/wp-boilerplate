@@ -34,13 +34,12 @@ export default async (app) => {
      * Proxy origin (`WP_HOME`)
      * @see {@link https://bud.js.org/docs/bud.proxy/}
      */
-    .proxy('http://example.test')
+    .proxy('https://wp-boilerplate:8890')
 
     /**
      * Development origin
      * @see {@link https://bud.js.org/docs/bud.serve/}
      */
-    // https://wp-boilerplate:8890/
     .serve('http://localhost:3000')
 
     /**
