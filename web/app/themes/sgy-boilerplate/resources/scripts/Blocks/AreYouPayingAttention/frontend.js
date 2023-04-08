@@ -8,7 +8,6 @@ payingAttentionBlocks.forEach(block => {
   const data = JSON.parse(block.querySelector('pre').innerHTML)
   ReactDOM.render(<Quiz {...data}/>, block)// deprecation warning produced
   block.classList.remove('paying-attention-block')
-  // console.log('trigger reload???!!!')
 })
 
 function Quiz(props) {

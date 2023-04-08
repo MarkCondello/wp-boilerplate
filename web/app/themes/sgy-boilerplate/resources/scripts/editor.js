@@ -6,9 +6,7 @@ import './Blocks/AreYouPayingAttention/index.js'
  * Editor entrypoint
  */
 domReady(() => {
-
   unregisterBlockStyle('core/button', 'outline');
-
   registerBlockStyle('core/button', {
     name: 'outline',
     label: 'Outline',
