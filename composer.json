@@ -1,6 +1,6 @@
 {
-    "name": "sgy/wordpress-boilerplate",
-    "description": "A generic Wordpress setup for SGY websites.",
+    "name": "mrc/wordpress-boilerplate",
+    "description": "A generic Wordpress setup.",
     "type": "project",
     "require": {
         "roots/wordpress": "^6.2",
@@ -12,7 +12,7 @@
     "authors": [
         {
             "name": "Mark",
-            "email": "mark.condello@sparkgreen.com.au"
+            "email": "condellomark@gmail.com"
         }
     ],
     "config": {

@@ -34,6 +34,7 @@ export default async (app) => {
      * Proxy origin (`WP_HOME`)
      * @see {@link https://bud.js.org/docs/bud.proxy/}
      */
+    // Chance this to local url
     .proxy('https://wp-boilerplate:8890')
 
     /**
@@ -46,7 +47,7 @@ export default async (app) => {
      * URI of the `public` directory
      * @see {@link https://bud.js.org/docs/bud.setPublicPath/}
      */
-    .setPublicPath('/app/themes/sgy/public/')
+    .setPublicPath('/app/themes/boilerplate/public/')
 
     /**
      * Generate WordPress `theme.json`

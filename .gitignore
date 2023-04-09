@@ -7,7 +7,7 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/themes/*
-!web/app/themes/sgy-boilerplate
+!web/app/themes/boilerplate
 
 # WordPress
 web/wp
