@@ -1,2 +1,3 @@
-- I needed to run `wp acorn vendor:publish` to generate the `config` directory and its files.
-  - With those files generated, I included the `Log1x\Poet\PoetServiceProvider::class` in the service providers section as per [this solutions](https://github.com/Log1x/navi) advice due to this publish option not being available with the `acorn` command.
+- I needed to run `wp acorn vendor:publish` to generate the `config` directory and its files. 
+  - With those files generated, I included the `Log1x\Poet\PoetServiceProvider::class` in the service providers section as per [this solutions](https://github.com/Log1x/navi) advice due to this publish option not being available with the `acorn` command listed in the `Poet` repo.
+  - [Acorn details](https://github.com/roots/acorn)
